@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>api fetch work?</title>
+    </head>
+    <body>
+        <button onclick="something()">Get actibity</button>
+        <div id="output"></div>
+
+        <script>
+            const url = 'https://bored-api.appbrewery.com/random';
+            const something = async() => {
+                try{
+                    const response =await fetch(url);
+                    if (!response.ok){
+                        throw new Error('Response status: ${response.status}');
+                    }
+
+                    const json = await response.json();
+                    const outputDiv =document.getElementById('output');
+                    const newElement =document.getElementById("p");
+                    newElement.textContent = json.activity;
+                    outputDiv.appendChild(newElement)
+                }   catch(erron){
+                    console.error(error.message);
+                }
+            }
+        </script>
+    </body>
+</html>
