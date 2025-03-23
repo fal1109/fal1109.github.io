@@ -1,4 +1,11 @@
-async function avatar(){
+document.addEventListener("DOMContentLoaded", () => {
+    discord()
+    spotify()
+    
+    
+})
+
+async function discord(){
 
     try{
 
@@ -27,11 +34,28 @@ async function spotify(){
         console.log(response)
 
         const data = await response.json();
-        const albumUrl = `$(data.data.spotify.album_art_url)`;
-        const imgElement = document.getElementById("spotify");
+        
+        const albumUrl = `${data.data.spotify.album_art_url}`;
+        const imgElement = document.getElementById("s_album");
 
         imgElement.src = albumUrl;
         imgElement.style.display = 'block';
+
+
+        const title = `${data.data.spotify.song}`;
+        const titleElement = document.getElementById("s_title");
+
+        titleElement.innerHTML = title;
+
+        const album = `${data.data.spotify.album}`;
+        const albumElement = document.getElementById("s_albumName");
+
+        albumElement.innerHTML = album;
+
+        const artist = `${data.data.spotify.artist}`;
+        const artistElement = document.getElementById("s_artist");
+
+        artistElement.innerHTML = artist;
     }
     catch(error){
         console.error(error);
