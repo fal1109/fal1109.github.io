@@ -20,10 +20,10 @@ async function discord(){
         }
 
         const avatarUrl = `https://cdn.discordapp.com/avatars/${data.data.discord_user.id}/${data.data.discord_user.avatar}.png`;
-        const imgElement = document.getElementById("pfp");
+        const pfp = document.getElementById("pfp");
 
-        imgElement.src = avatarUrl;
-        imgElement.style.display = "block";
+        pfp.src = avatarUrl;
+        pfp.style.display = "block";
 
         
         let currentActivity = null;

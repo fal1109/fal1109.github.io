@@ -182,3 +182,12 @@
      display: table;
      clear: both;
    }
+
+
+
+.organ{
+  display: inline-block;
+  border: 1px;
+  vertical-align: middle;
+  margin: 1%;
+}
