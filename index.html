@@ -17,7 +17,7 @@
 
         <div class="bg-image" style="display: flex;"></div>
         <div class="bg-text" style="display: flex;">            
-            <div class="pfp"></div>
+            <div class="pfp" id="pfp"></div>
             <div style="padding-left: 20px;">
                 <h1 class='oxygen-bold'>fal</h1><h6 class='oxygen-regular' style='position:absolute;'>if you ever feel stupid, im stupider</h6>
                 <p class='oxygen-regular'>anime, manga, frontend-programming, ricing, gaming, messing with tech</p>
@@ -29,19 +29,19 @@
                 
                 
                 <div class='links' style='align-items: center;'>
-                  <div style='margin: 0px 5px;'>
+                  <div style='margin: 0px 5px;' class="connection">
                     <a href='https://anilist.co/user/fal1109/' target="_blank">
                       <img src='links/anilist.svg' title='anilist' width='25px'>
                     </a>
                   </div>
                   
-                  <div style='margin:0px 5px;' >
-                    <a href='https://ch.tetr.io/u/62550408ecad38a39b7a5bd7' target="_blank">
+                  <div style='margin:0px 5px;' class="connection">
+                    <a href='https://ch.tetr.io/u/62550408ecad38a39b7a5bd7' target="_blank" >
                       <img src='links/tetrio.svg' title='tetrio' width='25px'> 
                     </a>
                   </div>
                   
-                  <div style='margin:0px 5px;'>
+                  <div style='margin:0px 5px;' class="connection">
                     <a href='https://discord.com/users/719202528130236436' target="_blank">
                       <img src='links/discord.svg' title='discord:fal1109' width='25px'>
                     </a>
@@ -52,23 +52,42 @@
         </div>
 
     
-        <div class='box' style='position:relative; padding:auto;'>
-        <div class="box oxygen-regular" style="width: 25%;height: 300px;background-color: rgba(52, 36, 11, 0.47);padding:auto;">
-          <img src="img/hanabi.png" align="absmiddle" width="185px" style="border-radius: 15px;" id="s_album">
-          <h5 align="center">now playing
+        <div class='box' style='position:relative; padding:auto;text-align: center;'>
+        <div class="box oxygen-regular" style="display:inline-block; vertical-align:middle;width: 25%;height: 350px;background-color: rgba(52, 36, 11, 0.47);padding:auto;">
+          <img src="img/hanabi.png" align="absmiddle" width="185px" style="border-radius: 15px;" id="album">
+          <h5 align="center">listening to
             <div style="display: flex;align-items: center;">
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M400-120q-66 0-113-47t-47-113q0-66 47-113t113-47q23 0 42.5 5.5T480-418v-422h240v160H560v400q0 66-47 113t-113 47Z"/></svg>
-              <div id="s_title" title="title">nothing</div>
+              <div id="title" title="title">nothing</div>
             </div>
             <div style="display: flex;align-items: center;">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M740-560h140v80h-80v220q0 42-29 71t-71 29q-42 0-71-29t-29-71q0-42 29-71t71-29q8 0 18 1.5t22 6.5v-208ZM120-160v-112q0-35 17.5-63t46.5-43q62-31 126-46.5T440-440q42 0 83.5 6.5T607-414q-20 12-36 29t-28 37q-26-6-51.5-9t-51.5-3q-57 0-112 14t-108 40q-9 5-14.5 14t-5.5 20v32h321q2 20 9.5 40t20.5 40H120Zm320-320q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T520-640q0-33-23.5-56.5T440-720q-33 0-56.5 23.5T360-640q0 33 23.5 56.5T440-560Zm0-80Zm0 400Z"/></svg>
-            <div id="s_artist" title="artist"></div>
+            <div id="artist" title="artist"></div>
           </div>
           <div style="display: flex;align-items: center;">  
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-300q75 0 127.5-52.5T660-480q0-75-52.5-127.5T480-660q-75 0-127.5 52.5T300-480q0 75 52.5 127.5T480-300Zm0-140q-17 0-28.5-11.5T440-480q0-17 11.5-28.5T480-520q17 0 28.5 11.5T520-480q0 17-11.5 28.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
-            <div id="s_albumName" title="album"></div>
+            <div id="albumName" title="album"></div>
           </div>
           </h5>
+        </div>
+        
+        <div class="box oxygen-regular" style="display:inline-block; vertical-align:middle; width: 25%;height: 350px;background-color: rgba(52, 36, 11, 0.47);padding:auto;">
+          <img src="img/hanabi.png" align="absmiddle" width="185px" style="border-radius: 15px;" id="activityImage">
+           <h5 text-align="center">
+            <div style="display: flex;">
+              <div id="activityType"></div>
+              <div id="activityName" style="margin-left: 2%;"></div>
+            </div>
+
+            <div style="display: flex;margin-top: 2px;">  
+              <div id="activityState"></div>
+            </div>
+
+            <div style="display: flex;margin-top: 5px;">  
+              <div id="activityDetails"></div>
+            </div>
+          </h5>
+          
         </div>
        
         </div>
