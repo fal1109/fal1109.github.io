@@ -32,10 +32,7 @@
     right: -520px;
   }
   
-  .content{
-   
-    margin: auto;
-}
+ 
 
   .connections svg{
     fill: var(--banner);
@@ -67,7 +64,7 @@
 
  .box{
      position:relative; 
-     margin-top: 5px;
+     margin: 5px;
      padding: 10px; 
      border: 2px solid rgba(0, 0, 0, 0.2);
      border-radius: 10px;
@@ -92,7 +89,7 @@
 
     .bg-image {
     position: relative; 
-     margin-top: 5px;
+     margin: 5px;
      padding: 10px; 
     
      
@@ -119,7 +116,7 @@
   .bg-text {
 
     position:absolute; 
-    margin-top: 5px;
+    margin: 5px;
     padding: 10px; 
     width: 740px;
     height: 165px;
@@ -165,7 +162,8 @@
    }
     
  .stacks{
-     margin-top: auto;
+     margin: auto;
+     max-width: 790px;
      width: 50%;
      border: 3px;
      padding: 10px;
