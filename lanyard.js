@@ -56,6 +56,7 @@ async function discord(){
                 return "Custom Status";
             }
           }
+
         
         const typeElement = document.getElementById("activityType");
 
@@ -66,15 +67,22 @@ async function discord(){
 
         stateElement.innerHTML = state;
 
-        const details = currentActivity.details;
-        const detailsElement = document.getElementById("activityDetails");
-
-        detailsElement.innerHTML = details;
+        
 
         const activityImage = currentActivity.assets.large_image;
         const activityImageElement = document.getElementById("activityImage");
 
-        activityImageElement.src = `https://media.discordapp.net/${activityImage.replace("mp:", "")}`;
+        
+        function imgConvert(activityImage) {
+          switch (activityImage) {
+            case activityImage.includes("mp:"):
+              return `https://cdn.discordapp.com/app-assets/${activityImage}.png`;
+            default:
+              return `https://media.discordapp.net/${activityImage.replace("mp:", "")}`;
+          }
+        }
+
+        activityImageElement.src = `${imgConvert(activityImage)}`;
         activityImageElement.style.display = "block";
      }
     catch(error){
