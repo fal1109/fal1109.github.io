@@ -74,14 +74,13 @@ async function discord(){
 
         
         function imgConvert(activityImage) {
-          switch (activityImage) {
-            case activityImage.includes("mp:"):
-              return `https://cdn.discordapp.com/app-assets/${activityImage}.png`;
-            default:
-              return `https://media.discordapp.net/${activityImage.replace("mp:", "")}`;
+          if (activityImage.includes("mp:")) {
+            return `https://media.discordapp.net/${activityImage.replace("mp:", "")}`;
+          } else {
+            return `https://cdn.discordapp.com/app-assets/${activityImage}.png`;
           }
         }
-
+        
         activityImageElement.src = `${imgConvert(activityImage)}`;
         activityImageElement.style.display = "block";
      }
