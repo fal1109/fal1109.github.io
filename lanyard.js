@@ -69,6 +69,8 @@ async function discord(){
 
         
 
+        const appID = currentActivity.application_id;
+
         const activityImage = currentActivity.assets.large_image;
         const activityImageElement = document.getElementById("activityImage");
 
@@ -77,7 +79,7 @@ async function discord(){
           if (activityImage.includes("mp:")) {
             return `https://media.discordapp.net/${activityImage.replace("mp:", "")}`;
           } else {
-            return `https://cdn.discordapp.com/app-assets/${activityImage}.png`;
+            return `https://cdn.discordapp.com/app-assets/${appID}/${activityImage}.png`;
           }
         }
         
