@@ -72,7 +72,7 @@ async function discord(){
         const appID = currentActivity.application_id;
 
         const activityImage = currentActivity.assets.large_image;
-        const activityImageElement = document.getElementById("activityImage");
+        const activityImageElement = document.getElementById("largeImage");
 
         
         function imgConvert(activityImage) {
@@ -85,6 +85,22 @@ async function discord(){
         
         activityImageElement.src = `${imgConvert(activityImage)}`;
         activityImageElement.style.display = "block";
+
+
+        const activityImageSmall = currentActivity.assets.small_image;
+        const activityImageSmallElement = document.getElementById("smallImage");
+
+        
+        function imgConvertSmall(activityImageSmall) {
+          if (activityImageSmall.includes("mp:")) {
+            return `https://media.discordapp.net/${activityImageSmall.replace("mp:", "")}`;
+          } else {
+            return `https://cdn.discordapp.com/app-assets/${appID}/${activityImageSmall}.png`;
+          }
+        }
+        
+        activityImageSmallElement.src = `${imgConvertSmall(activityImageSmall)}`;
+        activityImageSmallElement.style.display = "block";
      }
     catch(error){
         console.error(error);
