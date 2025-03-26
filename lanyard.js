@@ -163,17 +163,26 @@ async function spotify(){
 
         const title = `${data.data.spotify.song}`;
         const titleElement = document.getElementById("title");
+        const titleImage = document.getElementById("titleIcon");
 
         titleElement.innerHTML = title;
+        titleImage.src = '/icons/song.svg';
+        titleImage.style.display = 'block';
 
         const album = `${data.data.spotify.album}`;
         const albumElement = document.getElementById("albumName");
+        const albumIcon = document.getElementById("albumIcon");
 
+        albumIcon.src = '/icons/album.svg';
+        albumIcon.style.display = 'block';
         albumElement.innerHTML = album;
 
         const artist = `${data.data.spotify.artist}`;
         const artistElement = document.getElementById("artist");
+        const artistImage = document.getElementById("artistIcon");
 
+        artistImage.src = '/icons/artist.svg';
+        artistImage.style.display = 'block';
         artistElement.innerHTML = artist;
     }
     catch(error){
