@@ -4,6 +4,8 @@
    --box-bg: rgb(209, 153, 107);
    --banner: rgb(244, 186, 138);
    --banner-text: rgb(255, 222, 196); 
+   --term-bg: rgba(37, 17, 1, 0.737);
+   --term-txt: rgb(251, 162, 89);
    --banner-img: url("gifs/railway.gif");
    --pfp: url("img/pfp-light.jpg");    
   }
@@ -14,6 +16,8 @@
     --box-bg: rgb(91, 72, 57);
     --banner: rgb(244, 186, 138);
     --banner-text: rgb(255, 222, 196);
+    --term-bg: rgba(69, 40, 16, 0.611);
+    --term-txt: rgb(228, 147, 81);
     --banner-img: url("gifs/railway-dark.gif");
     --pfp: url("img/pfp-dark.webp");
    }
@@ -72,7 +76,17 @@
      color:var(--txt);
      
     }
-
+    .term{
+      position:relative; 
+     margin: 5px;
+     padding: 10px; 
+     border: 2px solid rgba(0, 0, 0, 0.2);
+     border-radius: 10px;
+     background-color: var(--term-bg);
+     color:var(--term-txt);
+     padding-left:27px; 
+     padding-right: 25px;
+    }
     .pfp {
       position: relative; 
       

@@ -66,6 +66,10 @@ async function discord(){
 
         const state = currentActivity.state;
         const stateElement = document.getElementById("activityState");
+        
+        if (state == null) {
+            stateElement.style.display = "none";
+        }
 
         stateElement.innerHTML = state;
 
