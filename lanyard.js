@@ -69,7 +69,14 @@ async function discord(){
 
         stateElement.innerHTML = state;
 
-        
+        const details = currentActivity.details;
+        const detailsElement = document.getElementById("activityDetails");
+
+        if (details == null) {
+            detailsElement.style.display = "none";
+        }
+
+        detailsElement.innerHTML = details;
 
         const appID = currentActivity.application_id;
 
