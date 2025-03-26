@@ -87,6 +87,22 @@
      padding-left:27px; 
      padding-right: 25px;
     }
+    .cursor {
+      background-color: rgb(228, 147, 81);
+      width: 0.25rem;
+      height: 0.75rem;
+  
+      animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+      from {
+          opacity: 1;
+      }
+      to {
+          opacity: 0;
+      }
+  }
     .pfp {
       position: relative; 
       
