@@ -28,7 +28,7 @@ async function discord(){
             }
         }
         
-        if (currentActivity.name === "SoundCloud" || currentActivity.name === "Youtube Music") {
+        if (currentActivity.name === "SoundCloud" || currentActivity.name === "Youtube Music" || currentActivity.name === "Spotify") {
           currentActivity = null;
         }
         
