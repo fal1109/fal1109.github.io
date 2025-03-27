@@ -111,33 +111,7 @@ async function discord(){
       activityImageSmallElement.src = `${imgConvertSmall(activityImageSmall)}`;
       activityImageSmallElement.style.display = "block";
       
-      for(activity of data.data.activities){
-        if(activity.name === "Youtube Music"){
-          const song = activity.details;
-          const songElement = document.getElementById("song");
-
-          songElement.innerHTML = song;
-
-          const artist = activity.state;
-          const artistElement = document.getElementById("artist");
-
-          artistElement.innerHTML = artist;
-          
-          const album = activity.assets.large_text;
-          const albumElement = document.getElementById("album");
-
-          albumElement.innerHTML = album;
-
-          const albumUrl = activity.assets.large_image;
-          const albumUrlElement = document.getElementById("albumUrl");
-
-          albumUrlElement.src = imgConvert(albumUrl);
-          albumUrlElement.style.display = "block";
-
-            break;
-        }
-      }
-    
+      
   }
    catch(error){
       console.error(error);
@@ -184,6 +158,8 @@ async function spotify(){
       artistImage.src = '/icons/artist.svg';
       artistImage.style.display = 'block';
       artistElement.innerHTML = artist;
+
+      
   }
   catch(error){
       console.error(error);
