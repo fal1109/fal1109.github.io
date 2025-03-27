@@ -43,7 +43,7 @@ const url = 'https://graphql.anilist.co',
 
 fetch(url, options).then(handleResponse)
     .then(data => {
-        const title = data.data.Page.activities[0].media.title.english;
+        const title = data.data.Page.activities[0].media.title.english || data.data.Page.activities[0].media.title.romaji;
         const cover = data.data.Page.activities[0].media.coverImage.large;
         const progress = data.data.Page.activities[0].progress;
         const status = data.data.Page.activities[0].status;
