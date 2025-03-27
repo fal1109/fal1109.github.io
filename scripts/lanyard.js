@@ -158,6 +158,30 @@ async function spotify(){
       artistImage.src = '/icons/artist.svg';
       artistImage.style.display = 'block';
       artistElement.innerHTML = artist;
+      
+      function formatTimestamp(timestamp) {
+          const date = new Date(timestamp);
+          const minutes = date.getUTCMinutes();
+          const seconds = date.getUTCSeconds();
+          return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+      }
+
+      const startTimestamp = data.data.spotify.timestamps.start;
+      const endTimestamp = data.data.spotify.timestamps.end;
+
+      const startElement = document.getElementById("start");
+      const endElement = document.getElementById("end");
+
+      const songDuration = endTimestamp - startTimestamp;
+
+      endElement.innerHTML = formatTimestamp(songDuration);
+
+      setInterval(() => {
+          const currentTimestamp = Date.now();
+          const elapsedTime = currentTimestamp - startTimestamp;
+          const currentTime = Math.min(elapsedTime, songDuration);
+          startElement.innerHTML = formatTimestamp(currentTime);
+      }, 1000);
 
       
   }
