@@ -13,12 +13,6 @@ async function discord(){
 
         const data = await response.json();
 
-        for (const activity of data.data.activities) {
-            if (activity.name === "Spotify" || activity.name === "Youtube Music") {
-                continue;
-            }
-        }
-
         const avatarUrl = `https://cdn.discordapp.com/avatars/${data.data.discord_user.id}/${data.data.discord_user.avatar}.png`;
         const pfp = document.getElementById("pfp");
 
@@ -28,14 +22,62 @@ async function discord(){
         
         let currentActivity = null;
         for (const activity of data.data.activities) {
-            if (activity.name !== "Spotify" && activity.name !== "Youtube Music") {
-                currentActivity = activity;
-                break;
+            if (activity.name === "Spotify" || activity.name === "Youtube Music" || activity.name === "SoundCloud") {
+          currentActivity = activity;
+          break;
             }
         }
+        
+        if (currentActivity.name === "SoundCloud" || currentActivity.name === "Youtube Music") {
+          currentActivity = null;
+        }
+        
 
-        
-        
+        for (const activity of data.data.activities) {
+          if (activity.name === "Youtube Music" || activity.name === "SoundCloud") {
+            const albumUrl = activity.assets.large_image
+              ? imgConvert(activity.assets.large_image)
+              : null;
+            const imgElement = document.getElementById("album");
+
+            if (albumUrl) {
+              imgElement.src = albumUrl;
+              imgElement.style.display = "block";
+            }
+            
+            const musicApp = activity.name;
+            const musicAppElement = document.getElementById("musicApp");
+
+            musicAppElement.innerHTML = musicApp;
+
+
+            const title = activity.details || "Unknown Title";
+            const titleElement = document.getElementById("title");
+            const titleImage = document.getElementById("titleIcon");
+
+            titleElement.innerHTML = title;
+            titleImage.src = "/icons/song.svg";
+            titleImage.style.display = "block";
+
+            const album = activity.assets.large_text || "Unknown Album";
+            const albumElement = document.getElementById("albumName");
+            const albumIcon = document.getElementById("albumIcon");
+
+            albumIcon.src = "/icons/album.svg";
+            albumIcon.style.display = "block";
+            albumElement.innerHTML = album;
+
+            const artist = activity.state || "Unknown Artist";
+            const artistElement = document.getElementById("artist");
+            const artistImage = document.getElementById("artistIcon");
+
+            artistImage.src = "/icons/artist.svg";
+            artistImage.style.display = "block";
+            artistElement.innerHTML = artist;
+
+            break;
+          }
+        }
         
         const activity = currentActivity.name;
         const activityElement = document.getElementById("activityName");
