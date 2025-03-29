@@ -121,32 +121,28 @@
             </div>
           </div>
 
-          <div class='box oxygen-regular shell' style='padding: 5px;'>
-            <div>
-              <table style="border-collapse: collapse; width: 100%; text-align: center; margin-top: 10px; border: 1px;">
-                <caption style="font-weight: bold; font-size: 1.2em; text-align: center; margin-bottom: 10px;">TETRIO Stats</caption>
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th>40LINES</th>
-                    <th>BLITZ</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Time/Score</td>
-                    <td id="Sprinttime">42.785s</td>
-                    <td id="Blitzscore">282,670</td>
-                  </tr>
-                  <tr>
-                    <td>PPS</td>
-                    <td id="Sprintpps">2.41</td>
-                    <td id="Blitzpps">1.71</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="box oxygen-regular shell" style="padding: 5px; display: flex; flex-direction: column; align-items: center;">
+            <h2 class="oxygen-bold" style="margin-bottom: 10px;">TETRIO STATS</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%;">
+              <div style="background-color: #e6c059; color: black; padding: 10px; border: 2px solid black; text-align: center; border-radius: 5px;">
+              <div class="oxygen-bold">BLITZ SCORE</div>
+                <div class="oxygen-regular" id="Blitzscore">0</div>
+              </div>
+              <div style="background-color: #e6c059; color: black; padding: 10px; border: 2px solid black; text-align: center; border-radius: 5px;">
+              <div class="oxygen-bold">40L RECORD</div>
+              <div class="oxygen-regular" id="Sprinttime"></div>
+              </div>
+              <div style="background-color: #e6c059; color: black; padding: 10px; border: 2px solid black; text-align: center; border-radius: 5px;">
+              <div class="oxygen-bold">COUNTRY RANK</div>
+              <div class="oxygen-regular" id="Country"></div>
+              </div>
+              <div style="background-color: #e6c059; color: black; padding: 10px; border: 2px solid black; text-align: center; border-radius: 5px;">
+                <a href="https://ch.tetr.io/u/falcon" style="text-decoration: none; color: black;">
+                  <div class="oxygen-bold">full profile</div>
+                </a>
+              </div>
             </div>
-          </div>
+            </div>
 
         </div>
   
