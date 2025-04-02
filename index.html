@@ -8,12 +8,16 @@
     <script type="text/javascript" src="scripts/lanyard.js" defer></script>
     <script type="text/javascript" src="scripts/anilist.js" defer></script>
     <script type="text/javascript" src="scripts/tetrio.js" defer></script>
-    <title>fal.1109</title>
+    <script type="text/javascript" src="scripts/misc.js" defer></script>
+    <title>1109</title>
     <link rel="icon" type="image" href="gifs/oneko-icon.gif">   
 </head>
  
 <body class="no-sidebar">    
-   
+  <div id="loading-screen" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); color: #fff; display: flex; justify-content: center; align-items: center; z-index: 9999; backdrop-filter: blur(10px); font-family: 'Oxygen', sans-serif; font-weight: 400;">
+    <h4>loading js</h4>
+  </div>
+
       <div class="stacks" style='width: 770px'>
 
         <div class="bg-image" style="display: flex;"></div>
@@ -21,6 +25,7 @@
             <div class="pfp" id="pfp"></div>
             <div style="padding-left: 20px;">
                 <h1 class='oxygen-bold'>fal</h1><h6 class='oxygen-regular' style='position:absolute;'>if you ever feel stupid, im stupider</h6>
+                <p class='oxygen-regular' id="bd-time" style="position: absolute; top: 125px;">my time: <span id="time"></span></p>
                 <p class='oxygen-regular'>anime, manga, frontend-programming, ricing, gaming, messing with tech</p>
                 <button id="theme">
                   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
@@ -56,8 +61,8 @@
           
         </div>
 
-    
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
 
           <div class='box oxygen-regular shell' style='padding: 5px;'>
             <div class="organ">
@@ -114,7 +119,7 @@
                 <img id='cover' src="" width="100px" style="border-radius: 10px; margin-bottom: 3px;">
               </div>
               <div class="organ">
-                last read
+                Last read
                 <div id='mediaTitle' class='oxygen-regular' style="margin-bottom: 1px;"></div>
                 <div id='mediaStatus' class='oxygen-regular' style="margin-bottom: 1px;"></div>
                 <div id='mediaProgress' class='oxygen-regular' style="margin-bottom: 1px;"></div>
@@ -127,7 +132,7 @@
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%;">
               <div style="background-color: #e6c059; color: black; padding: 10px; border: 2px solid black; text-align: center; border-radius: 5px;">
               <div class="oxygen-bold">blitz</div>
-                <div class="oxygen-regular" id="Blitzscore">0</div>
+                <div class="oxygen-regular" id="Blitzscore"></div>
               </div>
               <div style="background-color: #e6c059; color: black; padding: 10px; border: 2px solid black; text-align: center; border-radius: 5px;">
               <div class="oxygen-bold">sprint</div>
