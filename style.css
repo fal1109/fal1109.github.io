@@ -7,7 +7,7 @@
    --term-bg: rgba(37, 17, 1, 0.737);
    --term-txt: rgb(251, 162, 89);
    --banner-img: url("gifs/railway.gif");
-   --pfp: url("img/pfp-light.jpg");    
+   --pfp: url("img/lilith.png");    
   }
   
   .darkmode {
@@ -19,7 +19,7 @@
     --term-bg: rgba(69, 40, 16, 0.611);
     --term-txt: rgb(228, 147, 81);
     --banner-img: url("gifs/railway-dark.gif");
-    --pfp: url("img/pfp-dark.webp");
+    --pfp: url("img/lilith.png");
    }
 
    #theme{
@@ -105,16 +105,15 @@
   }
     .pfp {
       position: relative; 
-      
-      
       border-radius: 12px;
-      color:var(--banner);
+      color: var(--banner);
       height: 150px;
       width: 150px;
       
-     
-     /* The image used */
-     background-image: var(--pfp);
+      /* The image used */
+      background-image: var(--pfp);
+      background-size: 150px 150px; /* Ensures the image is 150px by 150px */
+      background-repeat: no-repeat; /* Prevents the image from repeating */
     }
 
     .bg-image {
