@@ -1,0 +1,118 @@
+<html>
+    <head>
+          <title>statistics</title>
+        <link rel="stylesheet" href="./styles/styles.css">
+         <script type="text/javascript" src="scripts/anilist.js" defer></script>
+         <script type="text/javascript" src="/scripts/tetrio.js" defer></script>
+        <style>@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');</style>
+
+    </head>
+    <body>
+        <div class="bg "> 
+
+            <div class="sidebar">
+                <a href="stats.html" style="text-decoration: none; color: inherit; color: red; background-color: white; border-top-left-radius: 12px;">
+                    <div class="oxygen-light sidebarItem" style="margin-top:15px;">stats</div>
+                </a>
+                <a href="gallery.html" style="text-decoration: none; color: inherit;">
+                    <div class="oxygen-light sidebarItem">cafe</div>
+                </a>
+                <a href="blogs.html" style="text-decoration: none; color: inherit;">
+                    <div class="oxygen-light sidebarItem">blogs</div>
+                </a>
+
+                </a>
+                <a href="tech.html" style="text-decoration: none; color: inherit;">
+                    <div class="oxygen-light sidebarItem">tech</div>
+                </a>
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <div class="cedarville-cursive-regular sidebarItem" style="position: fixed;right: 3px;bottom: 12px;font-size: xx-large;font-weight: 800;">fal</div>
+                </a>
+            </div>
+            
+            <div class="anilist oxygen-regular">
+               
+                <div style="writing-mode: vertical-rl; transform: rotate(180deg);margin-right: 12px;margin-top: auto;margin-bottom: auto;">
+                    anilist [manga]
+                </div>
+                    <div class="mangaAndstats">                        
+                        
+                        <div class="anilistChild" style="width: min-content;">
+                            <span>last read</span>
+                            <img src="" alt="" id="cover" width="120px">
+                            <span id="mediaTitle"></span>
+                            <span id="mediaStatus" style="text-transform: capitalize;"></span>
+                            <span id="mediaProgress"></span>
+                        </div>
+                    
+                        <div class="anilistChild" style="font-size: small;">
+                            <div style="display: inline;">chapters:<span id="chaptersRead"></span></div>
+                            <div style="display: inline;">titles:<span id="mangaCount"></span></div>
+                        </div>
+                    
+                    </div>
+                
+                <div class="anilistChild" style="flex: 1; margin-left: 10px;">
+                    <div id="mangaGenres"></div>
+                </div>
+                    
+            </div>
+
+            <div class="tetrio oxygen-regular">
+                <div class="tetrioStats" style="writing-mode: vertical-rl; transform: rotate(180deg); display: inline; border-color: rgb(235, 180, 180); border-left-width: 2px; border-left-style:solid;width: auto;">
+                    <img src="images/icons/40l.svg" alt="" width="40px" height="40px" style="transform: rotate(90deg);">
+                    <b>SPRINT</b>
+                </div>
+                <div class="tetrioStats" style="text-align: cemter;border-color: rgb(235, 180, 180); border-right-width: 2px; border-right-style:solid;width: auto;">
+                    <div class="sprint" style="align-items: center; height: 83px;">
+                        <div style="display: inline;"><span id="40Lpb" style="font-size: xx-large;margin-bottom: 3px;"></span></div>
+                        <div style="display: inline;"><span id="40Lpps"></span>PPS <span id="40lF"></span>F</div>
+                    </div>
+                </div>
+
+                <div class="tetrioStats" style="writing-mode: vertical-rl; transform: rotate(180deg); display: inline; border-color: rgb(235, 180, 180); border-left-width: 2px; border-left-style:solid;width: auto;">
+                    <img src="images/icons/blitz.svg" alt="" width="40px" height="52px" style="transform: rotate(90deg);">
+                    <b>BLITZ</b>
+                </div>
+                <div class="tetrioStats" style="text-align: center; border-color: rgb(235, 180, 180); border-right-width: 2px; border-right-style:solid;width: auto;">
+                    <div class="sprint" style="align-items: center; height: 81px;">
+                        <div style="display: inline;"><span id="blitzpb" style="font-size: xx-large;margin-bottom: 3px;"></span></div>
+                        <div style="display: inline;">LVL <span id="blitzlvl"></span> <span id="blitztsd"></span>TSD</div>
+                    </div>
+                </div>
+
+                <div class="tetrioStats" style="writing-mode: vertical-rl; transform: rotate(180deg); display: inline; border-color: rgb(235, 180, 180); border-left-width: 2px; border-left-style:solid;width: auto;height: auto;">
+                    <img src="images/icons/qp.svg" alt="" width="40px" height="40px" style="transform: rotate(90deg);">
+                    <b>ZENITH</b>
+                </div>
+                <div class="tetrioStats" style="text-align: center; border-color: rgb(235, 180, 180); border-right-width: 2px; border-right-style:solid;width: auto;">
+                    <div class="sprint" style="align-items: center; height: 78px;">
+                        <div style="display: inline;"><span id="qppb" style="font-size: xx-large;margin-bottom: 3px;"></span></div>
+                        <div style="display: inline;"><span id="qpapm"></span> APM <span id="qprank"></span>N<sup>o</sup></div>
+                    </div>
+                </div>
+
+                <div class="tetrioStats" style="writing-mode: vertical-rl; transform: rotate(180deg); display: inline; border-color: rgb(235, 180, 180); border-left-width: 2px; border-left-style:solid;width: auto;height: auto; height: 95px;">
+                    <b>other stats</b>
+                </div>
+                <div class="tetrioStats" style="text-align: center; border-color: rgb(235, 180, 180); border-right-width: 2px; border-right-style:solid;width: auto;">
+                    <div class="sprint" style="align-items: center; height: 78px;">
+                        <div style="display: block;"><span>pieces placed: </span><span id="stacker"></span></div>
+                        <div style="display: block;"><span>sprints done: </span><span id="sprinter"></span></div>
+                        <div style="display: block;"><span>20TSD: </span><span id="tsd"></span></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            
+                
+        </div>
+        
+
+        
+        
+    </body>
+
+</html>

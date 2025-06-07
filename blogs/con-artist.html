@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>dotfiles:con-artist</title>
+        <link rel="stylesheet" href="blog.css">
+    </head>
+    <body class="content">
+        <h1 class="oxygen-bold"><u>con-artist-my hyprland dotfiles</u></h1>
+
+        <article>
+            <p class="oxygen-regular" id="intro">
+                hello! i have made rather makeshift hyprland dotfile(dotfiles? idk) which is an accumulation of various bits of other people's dotfiles. i modified a few things and made it have more gui and cleaned the waybar and stuff, while trying to keep the minimalist look. but i digress. installation is pretty easy tbh.
+            </p>
+        </article>
+
+        <article>
+            <p id="install">
+                <h2 class="oxygen-bold">installation</h2>
+                <p class="oxygen-regular">
+                    1. clone the repo, requires git to be installed<br><br>
+                    ~/ <code>git clone https://fal1109.github.com/con-artist</code><br><br>
+                    2. run the install.sh script<br><br>
+                    ~/ <code>cd con-artist</code><br><br>
+                    ~/ <code>sh install.sh</code><br><br>
+                    the script may remove your existing .config file so please back them up. <br><br>
+                    3. copy the dotfiles[WARNING: this will remove your existing .config file, please consider backing them up if they are necessary]<br><br>
+                    <code>cp -r con-artist/.config ~/</code><br><br>
+                    <code>cp con-artist/.zshrc ~/</code><br><br>
+                    <code>cp con-artist/.bashrc ~/</code><br><br>
+                    i do not really know if the script will do these commands successfully or not so this is mostly a precautionary step. <br><br>
+                    4. select a wallpaper using waypaper or the wal command. this will start up the waybar.<br><br>
+                    that should be all ^-^
+                </p>
+            </p>
+        </article>
+
+        <article>
+            <p id="commands">
+                <h2 class="oxygen-bold">commands</h2>
+                <p class="oxygen-regular">
+                    <span class="oxygen-regular">you can see and change the commands i set in hyprland config.</span><br><br>
+                    <h4 class="oxygen-regular">apps</h4>
+                    <span class="oxygen-regular">1. super+t = kitty</span><br><br>
+                    <span class="oxygen-regular">2. super+m = nautilus[file manager]</span><br><br>
+                    <span class="oxygen-regular">3. super+w = waypaper[wallpaper]</span><br><br>
+                    <span class="oxygen-regular">4. super+b = open browser[i set it to floorp, you may want to change it to the one you use]</span><br><br>
+                    <span class="oxygen-regular">5. super+a = tofi[app launcher]</span><br><br>
+                    <h4 class="oxygen-regular">other misc commands</h4>
+                    <span class="oxygen-regular">1. super+q = kills current process/quit app</span><br><br>
+                    <span class="oxygen-regular">2. super+m = end current hyprland session</span><br><br>
+                    <span class="oxygen-regular">3. super+m = nautilus[file manager]</span><br><br>
+                    <span class="oxygen-regular">4. super+f = fullscreen</span><br><br>
+                    <span class="oxygen-regular">5. super+esc = wlogout[im not sure why this didnt work for me]</span><br><br>
+                    <span class="oxygen-regular">6. super+shift+t = launch waybar</span><br><br>
+                    <span class="oxygen-regular">7. super+arrow keys = change focus to corresponding window</span><br><br>
+                    <span class="oxygen-regular">8. super+0 to 9 = move to workspace 1-10, where 1 is the first workspace and 0 is the 10th</span><br><br>
+                    <span class="oxygen-regular">9. super+shift+0 to 9 = move active window to corresponding workspace</span><br><br>
+                    <span class="oxygen-regular">10. super+left click[hold] = move a window</span><br><br>
+                    <span class="oxygen-regular">11. super+right click[hold] = resize window</span><br><br>
+                    <span class="oxygen-regular">12. super+arrow keys = change size of active window with arrow keys in corresponding direction</span><br><br>
+                    <span class="oxygen-regular">13. super+l = lock desktop</span><br><br>
+                    <span class="oxygen-regular">14. super+s = take screenshot of area selected with mouse[its similar to windows snip tool; drag your mouse diagonally over the area you wanna take screenshot of. the image is saved to your clipboard]</span><br><br>
+                </p>
+            </p>
+        </article>
+
+        <article>
+            <p class="oxygen-regular" id="reference">
+                <h2 class="oxygen-bold">references</h2>
+                <p class="oxygen-regular">
+                    <ol>
+                        <li class="oxygen-regular"><a href="https://github.com/dhaneshdutta/dotfiles?tab=readme-ov-file">dhaneshdutta's dotfiles, the main base of the setup</a></li>
+                        <li class="oxygen-regular"><a href="https://github.com/Keyitdev/sddm-astronaut-theme/tree/master">keyitdev's collection of sddm themes</a></li>
+                        <li class="oxygen-regular"><a href="https://github.com/Keyitdev/sddm-astronaut-theme/tree/master">hyyaoe's dotfiles for the lockscreen</a></li>
+                    </ol>
+                </p>
+            </p>
+        </article>
+
+        <article>
+            <p class="oxygen-regular" id="bugs">
+                <h2 class="oxygen-bold">bugs</h2>
+                <p class="oxygen-regular">
+                    <ol>
+                        <li class="oxygen-regular">the waybar sometimes dies on its own</li>
+                        <li class="oxygen-regular">when changing wallpaper too much by waypaper, the waybar dies</li>
+                    </ol>
+                </p>
+            </p>
+        </article>
+
+        
+
+
+    </body>
+
+
+</html>

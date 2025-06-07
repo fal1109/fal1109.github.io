@@ -1,0 +1,32 @@
+.oxygen-light {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+   }
+   
+.oxygen-regular {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+   }
+   
+.oxygen-bold {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+      
+  }
+
+
+
+
+body{
+    background-color: rgb(29, 23, 19);
+    color: rgb(193, 151, 118);
+    top: 50px;
+    }
+
+.content{
+    max-width: 570px;
+    margin: auto;
+}

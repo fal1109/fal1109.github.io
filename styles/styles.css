@@ -1,0 +1,471 @@
+:root{
+    --box-bg: #011627; /*rich black*/
+    --text-color: #e9203b; /*red(munsell)*/ /*also used for hover text color*/
+
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+body {
+    cursor: url('/images/icons/cur.png'), auto;
+    
+}
+
+
+/*background*/
+
+.bg {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden;
+}
+
+.bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bg/lilith2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(60%);
+    z-index: -1;
+}
+
+.content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+/*sidebar*/  
+
+.sidebar{
+  position: fixed;
+  right: 0;
+  height: 98%;
+  width: 70px;
+  top: 3%;
+  
+
+  border-radius: 23px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  
+  padding-top: 10px;
+
+  color: rgb(252, 246, 246);
+  border-color: red;
+  background-color: rgba(8, 4, 28, 0.922);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarItem{
+
+    padding: 10px;
+    cursor: url('/images/icons/cur.png'), auto;
+    transition: background 0.3s, color 0.3s;
+    position: relative;
+    z-index: 1;
+    font-size: large;
+    margin-bottom: 6px;
+}
+
+
+.sidebarItem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: white;
+    transition: transform 0.3s, opacity 0.3s;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.sidebarItem:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.sidebarItem:hover {
+    color: red;
+}
+
+/* Font Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.cedarville-cursive-regular {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.oxygen-light {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+    
+.oxygen-regular {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+    
+.oxygen-bold {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*home stuff*/
+
+.profile {
+    position: relative;
+    width: 150%;
+    color: rgb(241, 121, 121);
+
+    background-color: rgba(18, 17, 25, 0.945);
+    backdrop-filter: blur(70%);
+    -webkit-backdrop-filter: blur(14%);
+    margin-left: auto;
+    margin-right: auto;
+    
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom:12px;
+    margin-top: 150px;
+
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row ;
+    justify-content: flex-start;
+}
+
+.profileChild{
+    margin: 0;
+    position:relative; 
+}
+
+.bio{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 7px;
+}
+
+.bioChild{
+    margin-left: 6px;
+    padding: 0%;
+    position:relative; 
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 7px;
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+}
+
+.linksChild{
+    margin: 0;
+    padding: 0%;
+    position:relative;
+    margin-left: 5px;
+    margin-right: 5px;
+     
+}
+
+.status{
+    position: relative;
+    width: 150%;
+    color: rgb(241, 121, 121);
+
+    background-color: rgba(18, 17, 25, 0.945);
+    backdrop-filter: blur(70%);
+    -webkit-backdrop-filter: blur(14%);
+    margin-left: auto;
+    margin-right: auto;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom:12px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.statusChild{
+    margin-left: 10px;
+    position:relative; 
+     text-align: left;
+}
+
+.friends{
+    position: relative;
+    width: 150%;
+    color: rgb(241, 121, 121);
+
+    background-color: rgba(18, 17, 25, 0.945);
+    backdrop-filter: blur(70%);
+    -webkit-backdrop-filter: blur(14%);
+    margin-left: auto;
+    margin-right: auto;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom:12px;
+
+    display: flex;
+    flex-direction: column;
+    
+}
+.friendsChild{
+    margin-left: 10px;
+    position:relative; 
+    text-align: left;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*i can have as many classes i want lol*/
+
+
+
+.fren {
+   display: flex;
+    flex-direction: row;
+}
+
+.frenChild {
+    margin-left: 1px;
+    margin-right: 10px;
+    transition: transform 0.2s;
+}
+
+.frenChild:hover {
+    transform: scale(1.08);
+}
+
+.terminal{
+    background-color: rgba(18, 17, 25, 0.945);
+    width: 700px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: rgb(241, 121, 121);
+    padding-left: 20px;
+    margin-top:10% ;
+}
+.cursor {
+    background-color: rgb(208, 146, 146);
+    width: 0.25rem;
+    height: 0.75rem;
+    display: inline-block;
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
+
+.devices{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.device{
+    background-color: rgba(18, 17, 25, 0.945);
+    width: 200px;
+    text-align: left;
+    margin-left: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: rgb(241, 121, 121);
+    padding-left: 20px;
+
+    text-align: center;
+}
+
+.blogs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog{
+    background-color: rgba(18, 17, 25, 0.945);
+    width: auto;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: rgb(241, 121, 121);
+    padding-left: 20px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    /* Ensure all .blog elements in a flex container get equal height */
+    flex: 1 1 0;
+}
+
+.anilist {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 760px;
+    max-width: 760px;
+    
+    background-color: rgba(18, 17, 25, 0.945);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 60px;
+    color: rgb(241, 121, 121);
+    padding-left: 20px;
+}
+
+
+
+.anilistChild{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: flex-start;
+
+    width: auto;
+    
+
+    background-color: rgba(18, 17, 25, 0.945);
+    border: 2px solid #e9203b;
+    padding: 15px;
+    border-radius: 10px;
+
+    color: rgb(241, 121, 121);
+    padding-left: 20px;
+    gap: 6px;
+
+    margin-top: 10px;
+}
+
+#mangaGenre{
+    display: flex;
+    flex-direction: row;
+
+    
+    width: 100%;
+    margin-top: 10px;
+}
+
+.genre {
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.tetrio{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 70%;
+    min-width: 760px;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(18, 17, 25, 0.945);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: rgb(241, 121, 121);
+    padding-left: 20px;
+    text-align: left;
+}
+
+.tetrioStats {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 3px;
+}
+
+.sprint{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    color: rgb(241, 121, 121);
+
+}
+

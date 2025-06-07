@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <link rel="stylesheet" href="/style.css">
+    <script type="text/javascript" src="scripts/darkmode.js" defer></script>
+    <script type="text/javascript" src="scripts/lanyard.js" defer></script>
+    <script type="text/javascript" src="scripts/anilist.js" defer></script>
+    <script type="text/javascript" src="scripts/tetrio.js" defer></script>
+    <script type="text/javascript" src="scripts/misc.js" defer></script>
+    <title>fal</title>
+    <link rel="icon" type="image" href="gifs/oneko-icon.gif">   
+</head>
+ 
+<body class="no-sidebar">    
+  <div id="loading-screen" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); color: #fff; display: flex; justify-content: center; align-items: center; z-index: 9999; backdrop-filter: blur(10px); font-family: 'Oxygen', sans-serif; font-weight: 400;">
+    <h4>loading js</h4>
+  </div>
+
+      <div class="stacks" style='width: 770px'>
+
+        <div class="bg-image" style="display: flex;"></div>
+        <div class="bg-text" style="display: flex;">            
+            <div class="pfp" id="pfp"></div>
+            <div style="padding-left: 20px;">
+                <h1 class='oxygen-bold'>fal</h1><h6 class='oxygen-regular' style='position:absolute;'>if you ever feel stupid, im stupider</h6>
+                <p class='oxygen-regular' id="bd-time" style="position: absolute; top: 125px;">my time: <span id="time"></span></p>
+                <p class='oxygen-regular'>anime, manga, frontend-programming, ricing, gaming, messing with tech</p>
+                <button id="theme">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+                    <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+                    <path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/>
+                  </svg>
+                </button>
+                
+                
+                
+                <div class='links' style='align-items: center;'>
+                  <div style='margin: 0px 5px;' class="connection">
+                    <a href='https://anilist.co/user/fal/' target="_blank">
+                      <img src='links/anilist.svg' title='anilist' width='25px' fill="#a66d47">
+                    </a>
+                  </div>
+                  
+                  <div style='margin:0px 5px;' class="connection">
+                    <a href='https://ch.tetr.io/u/62550408ecad38a39b7a5bd7' target="_blank">
+                      <img src='links/tetrio.svg' title='tetrio' width='25px' > 
+                    </a>
+                  </div>
+                  
+                  <div style='margin:0px 5px;' class="connection">
+                    <a href='https://discord.com/users/719202528130236436' target="_blank">
+                      <img src='links/discord.svg' title='discord:fal1109' width='25px' >
+                    </a>
+                  </div>
+                </div>
+            </div>
+          
+        </div>
+
+        <div class="box">
+          <h3 class="oxygen-bold">on break</h3>
+          <p class="oxygen-regular">
+            got a lot on my plate, so ill be taking a break from 10th april till sine-die. i can randomly appear from time to time but yeah, wish me luck
+          </p>
+        </div>  
+
+
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+
+          <div class='box oxygen-regular shell' style='padding: 5px;'>
+            <div class="organ">
+              <img id="album" src="" width="125px" style="border-radius: 10px;" align="absmiddle">
+            </div>
+            <div class="organ">
+              listening to<p id="musicApp"></p>
+              <div style="display: flex;">
+                <img id='titleIcon' src="" style="margin-right: 1px;">
+                <div id="title" class='oxygen-regular' style="margin-bottom: 1px;">nothing</div>
+              </div>
+              <div style="display: flex;">
+                <img id="artistIcon" src="" style="margin-right: 1px;">
+                <div id="artist" class='oxygen-regular' style="margin-bottom: 1px;"></div>
+              </div>
+              <div style="display: flex;">
+                <img id="albumIcon" src="" style="margin-right: 1px;">
+                <div id="albumName" class='oxygen-regular' style="margin-bottom: 1px;"></div>
+              </div>
+              <div style="display: flex;">
+                <div id="start">--</div>
+                /
+                <div id="end">--</div>
+              </div>
+            </div>
+          </div>
+
+          <div class='box oxygen-regular shell' style='padding: 5px;'>
+            <div class="organ">
+              <img id="largeImage" src="" width="125px" style="border-radius: 10px;" align="absmiddle">
+            </div>
+            <div class="organ">
+              <div style="position: absolute; top: 14px; left: 310px;">
+                <img id="smallImage" src="" width="50px" style="border-radius: 10px;" align="absmiddle">
+              </div>
+              <div style="display: flex;">
+                <div id="activityType" class='oxygen-regular' style="margin-bottom: 1px;">doing</div>
+              </div>
+              <div style="display: flex;">
+                <div id="activityName" class='oxygen-regular' style="margin-bottom: 1px;"> nothing</div>
+              </div>
+              <div style="display: flex;">
+                <div id="activityState" class='oxygen-regular' style="margin-bottom: 1px;"></div>
+              </div>
+              <div style="display: flex;">
+                <div id="activityDetails" class='oxygen-regular' style="margin-bottom: 1px;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class='box oxygen-regular shell' style='padding: 5px;'>
+            <div>
+              <div class="organ">
+                <img id='cover' src="" width="100px" style="border-radius: 10px; margin-bottom: 3px;">
+              </div>
+              <div class="organ">
+                Last read
+                <div id='mediaTitle' class='oxygen-regular' style="margin-bottom: 1px;"></div>
+                <div id='mediaStatus' class='oxygen-regular' style="margin-bottom: 1px;"></div>
+                <div id='mediaProgress' class='oxygen-regular' style="margin-bottom: 1px;"></div>
+              </div>
+            </div>
+          </div>
+
+            <div class="box oxygen-regular shell" style="padding: 5px; display: flex; flex-direction: column; align-items: center;">
+            <h3 class="oxygen-bold" style="margin-bottom: 10px;">tetrio stats</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%;">
+              <div style="background-color: #e6c059; color: black; padding: 10px; border: 2px solid black; text-align: center; border-radius: 5px;">
+              <div class="oxygen-bold">blitz</div>
+                <div class="oxygen-regular" id="Blitzscore"></div>
+              </div>
+              <div style="background-color: #e6c059; color: black; padding: 10px; border: 2px solid black; text-align: center; border-radius: 5px;">
+              <div class="oxygen-bold">sprint</div>
+              <div class="oxygen-regular" id="Sprinttime"></div>
+              </div>
+              <div style="background-color: #e6c059; color: black; padding: 10px; border: 2px solid black; text-align: center; border-radius: 5px;">
+              <div class="oxygen-bold">country rank</div>
+              <div class="oxygen-regular" id="Country"></div>
+              </div>
+              <div style="background-color: #e6c059; color: black; padding: 10px; border: 2px solid black; text-align: center; border-radius: 5px;">
+                <a href="https://ch.tetr.io/u/falcon" style="text-decoration: none; color: black;">
+                  <div class="oxygen-bold">full profile</div>
+                </a>
+              </div>
+            </div>
+            </div>
+
+        </div>
+  
+    
+        
+        <div class='term'>
+            <pre>
+~
+❯ neofetch
+
+⣇⣿⠘⣿⣿⣿⡿⡿⣟⣟⢟⢟⢝⠵⡝⣿⡿⢂⣼⣿⣷⣌⠩⡫⡻⣝⠹⢿⣿⣷     fal@catbox 
+⡆⣿⣆⠱⣝⡵⣝⢅⠙⣿⢕⢕⢕⢕⢝⣥⢒⠅⣿⣿⣿⡿⣳⣌⠪⡪⣡⢑⢝⣇     ─────────── 
+⡆⣿⣿⣦⠹⣳⣳⣕⢅⠈⢗⢕⢕⢕⢕⢕⢈⢆⠟⠋⠉⠁⠉⠉⠁⠈⠼⢐⢕⢽     OS: Arch Linux x86_64, Windows 10
+⡗⢰⣶⣶⣦⣝⢝⢕⢕⠅⡆⢕⢕⢕⢕⢕⣴⠏⣠⡶⠛⡉⡉⡛⢶⣦⡀⠐⣕⢕     CPU: Intel i3-10100
+⡝⡄⢻⢟⣿⣿⣷⣕⣕⣅⣿⣔⣕⣵⣵⣿⣿⢠⣿⢠⣮⡈⣌⠨⠅⠹⣷⡀⢱⢕     GPU: UHD 630
+⡝⡵⠟⠈⢀⣀⣀⡀⠉⢿⣿⣿⣿⣿⣿⣿⣿⣼⣿⢈⡋⠴⢿⡟⣡⡇⣿⡇⡀⢕     RAM: 12GB
+⡝⠁⣠⣾⠟⡉⡉⡉⠻⣦⣻⣿⣿⣿⣿⣿⣿⣿⣿⣧⠸⣿⣦⣥⣿⡇⡿⣰⢗⢄     Disk 1: 1TB HDD
+⠁⢰⣿⡏⣴⣌⠈⣌⠡⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣬⣉⣉⣁⣄⢖⢕⢕⢕     Disk 2: 128GB SSD[Corrupt]
+⡀⢻⣿⡇⢙⠁⠴⢿⡟⣡⡆⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣵⣵⣿     Shell: fish
+⡻⣄⣻⣿⣌⠘⢿⣷⣥⣿⠇⣿⣿⣿⣿⣿⣿⠛⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣷⢄⠻⣿⣟⠿⠦⠍⠉⣡⣾⣿⣿⣿⣿⣿⣿⢸⣿⣦⠙⣿⣿⣿⣿⣿⣿⣿⣿⠟
+⡕⡑⣑⣈⣻⢗⢟⢞⢝⣻⣿⣿⣿⣿⣿⣿⣿⠸⣿⠿⠃⣿⣿⣿⣿⣿⣿⡿⠁⣠
+⡝⡵⡈⢟⢕⢕⢕⢕⣵⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣿⣿⣿⣿⣿⠿⠋⣀⣈⠙
+⡝⡵⡕⡀⠑⠳⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⢉⡠⡲⡫⡪⡪⡣ 
+            
+~
+❯<div class="cursor" style="display: inline-block; margin-left: 10px; margin-top: 5px;"></div>
+
+</pre>
+        </div>
+        
+        <div class="box">
+        
+          <h2 class="oxygen-bold">blogs/guides</h2> 
+          
+          <ol>
+            <li class="oxygen-regular"><a href="blogs/h2p.html" style="color: rgb(235, 212, 111);">how to patch roms</a></li>
+            <li class="oxygen-regular"><a href="blogs/updates.html" style="color: rgb(235, 212, 111);">updates</a></li> 
+            <li class="oxygen-regular"><a href="blogs/con-artist.html" style="color: rgb(235, 212, 111);">con-artist, my dotfiles</a></li>  
+          </ol>
+        </div>
+        
+        
+        <div class='box'>
+          
+          <h2 class="oxygen-bold">friends and cool people</h2>
+
+          <a href='https://fal1109.github.io' text-decoration='none'>
+            <img src='links/button.png'>
+          </a>
+
+          <a href="https://rinici.de" text-decoration='none'>
+              <img src="https://rinici.de/button.png">
+          </a>
+
+          <ul>
+            <li class="oxygen-regular"><a href="https://seele1306.com"  style="color: rgb(235, 212, 111);">Aoi/Seele1306</a></li>
+            <li class="oxygen-regular"><a href="https://khgb.netlify.app/"  style="color: rgb(235, 212, 111);">khgb</a></li>
+          </ul>
+
+        </div>
+    
+
+
+</body>
+
+</html>

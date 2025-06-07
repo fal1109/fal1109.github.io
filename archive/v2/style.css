@@ -1,0 +1,256 @@
+  :root{
+   --bg: rgb(216, 189, 166);
+   --txt:rgb(114, 61, 18);
+   --box-bg: rgb(209, 153, 107);
+   --banner: rgb(244, 186, 138);
+   --banner-text: rgb(255, 222, 196); 
+   --term-bg: rgba(37, 17, 1, 0.737);
+   --term-txt: rgb(251, 162, 89);
+   --banner-img: url("gifs/railway.gif");
+   --pfp: url("img/lilith.png");    
+  }
+  
+  .darkmode {
+    --bg: rgb(29, 23, 19);
+    --txt:rgb(228, 147, 81);
+    --box-bg: rgb(91, 72, 57);
+    --banner: rgb(244, 186, 138);
+    --banner-text: rgb(255, 222, 196);
+    --term-bg: rgba(69, 40, 16, 0.611);
+    --term-txt: rgb(228, 147, 81);
+    --banner-img: url("gifs/railway-dark.gif");
+    --pfp: url("img/lilith.png");
+   }
+
+   #theme{
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -100px;
+    right: -520px;
+  }
+  
+ 
+
+  .connections svg{
+    fill: var(--banner);
+  }
+  
+  #theme svg{
+    fill: var(--banner);
+  }
+  #theme svg:last-child{
+    display: none;
+  }
+  .darkmode #theme svg:last-child{
+    display: block;
+  }
+  .darkmode #theme svg:first-child{
+    display: none;
+  }
+
+   body {
+     background-color: var(--bg); 
+     width: 100%; 
+     height: auto;
+     overflow: show;
+     position: absolute;
+     left: auto ;
+     top: 25px;
+     right: auto ;
+    }
+
+ .box{
+     position:relative; 
+     margin: 5px;
+     padding: 10px; 
+     border: 2px solid rgba(0, 0, 0, 0.2);
+     border-radius: 10px;
+     background-color: var(--box-bg);
+     color:var(--txt);
+     
+    }
+    .term{
+      position:relative; 
+     margin: 5px;
+     padding: 10px; 
+     border: 2px solid rgba(0, 0, 0, 0.2);
+     border-radius: 10px;
+     background-color: var(--term-bg);
+     color:var(--term-txt);
+     padding-left:27px; 
+     padding-right: 25px;
+    }
+    .cursor {
+      background-color: rgb(228, 147, 81);
+      width: 0.25rem;
+      height: 0.75rem;
+  
+      animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+      from {
+          opacity: 1;
+      }
+      to {
+          opacity: 0;
+      }
+  }
+    .pfp {
+      position: relative; 
+      border-radius: 12px;
+      color: var(--banner);
+      height: 150px;
+      width: 150px;
+      
+      /* The image used */
+      background-image: var(--pfp);
+      background-size: 150px 150px; /* Ensures the image is 150px by 150px */
+      background-repeat: no-repeat; /* Prevents the image from repeating */
+    }
+
+    .bg-image {
+    position: relative; 
+     margin: 5px;
+     padding: 10px; 
+    
+     
+     border-radius: 5px;
+     color:var(--banner);
+     height: 160px;
+    
+    /* The image used */
+    background-image: var(--banner-img);
+  
+    /* Add the blur effect */
+    filter: blur(6px);
+    -webkit-filter: blur(2px);
+  
+    /* Full height */
+    
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .bg-text {
+
+    position:absolute; 
+    margin: 5px;
+    padding: 10px; 
+    width: 740px;
+    height: 165px;
+   
+    border-radius: 10px;
+    padding-left: 13px;
+    top: 13px;
+    left: auto;
+    right: auto;
+    color:var(--banner-text);
+    z-index: 2;
+    
+  
+  }  
+
+ .links{
+     display: flex;
+     flex-direction: row-reverse;
+     position: absolute;
+     top: 135px;
+    left: auto;
+    right: 20px;
+   }
+ 
+  
+   
+ .oxygen-light {
+     font-family: "Oxygen", sans-serif;
+     font-weight: 300;
+     font-style: normal;
+    }
+    
+ .oxygen-regular {
+     font-family: "Oxygen", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+    }
+    
+ .oxygen-bold {
+     font-family: "Oxygen", sans-serif;
+     font-weight: 700;
+     font-style: normal;
+       
+   }
+    
+ .stacks{
+     margin: auto;
+     max-width: 790px;
+     width: 50%;
+     border: 3px;
+     padding: 10px;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+   }
+ 
+ .column {
+     float: left;
+     width: 50%;
+   }
+ 
+ .row:after {
+     content: "";
+     display: table;
+     clear: both;
+   }
+
+
+
+.organ{
+  display: inline-block;
+  border: 1px;
+  vertical-align: middle;
+  margin: 1%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+.no-sidebar {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
