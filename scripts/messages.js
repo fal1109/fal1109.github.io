@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!message) return;
 
             
-            await fetch('https://discord.com/api/webhooks/1382043311732297909/coj_lDXwyf4ixf1Wp_Rj7foMucU0zwu0tvdUFlGEeXBMfXthNrCKfEk1nbRJR84iAt5U', {
+            await fetch('', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!content.trim()) return;
 
         // Send to Discord webhook
-        await fetch('https://discord.com/api/webhooks/1382043311732297909/coj_lDXwyf4ixf1Wp_Rj7foMucU0zwu0tvdUFlGEeXBMfXthNrCKfEk1nbRJR84iAt5U', {
+        await fetch('', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
