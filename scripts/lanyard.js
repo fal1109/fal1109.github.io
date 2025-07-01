@@ -244,3 +244,30 @@ async function khgbPfp() {
 }
 
 khgbPfp();
+
+  async function filyPfp() {
+
+  try {
+    const response = await fetch('https://api.lanyard.rest/v1/users/831530536781873163');
+    const data = await response.json();
+    const user = data.data.discord_user;
+    let avatarUrl;
+    if (user.avatar && user.id) {
+      const format = user.avatar.startsWith('a_') ? 'gif' : 'png';
+      avatarUrl = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.${format}?size=256`;
+    } else {
+    
+      const discrim = parseInt(user.discriminator) % 5;
+      avatarUrl = `https://cdn.discordapp.com/embed/avatars/${discrim}.png`;
+    }
+    const filyElement = document.getElementById('fily');
+    if (filyElement) {
+      filyElement.src = avatarUrl;
+      filyElement.style.display = 'block';
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+filyPfp();
