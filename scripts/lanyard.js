@@ -78,23 +78,26 @@ async function discord(){
 
       detailsElement.innerHTML = details;
 
-      const appID = currentActivity.application_id;
+      const appID = currentActivity && currentActivity.application_id ? currentActivity.application_id : null;
 
-      const activityImage = currentActivity.assets.large_image;
+      const activityImage = currentActivity && currentActivity.assets && currentActivity.assets.large_image ? currentActivity.assets.large_image : null;
       const activityImageElement = document.getElementById("largeImage");
-      
 
-      
       function imgConvert(activityImage) {
-        if (activityImage.includes("mp:")) {
+        if (!activityImage || !appID) {
+          // No image or appID present, use a generic fallback image
+            return `https://dcdn.dstn.to/app-icons/${appID || 0}.png`;
+        } else if (activityImage.includes("mp:")) {
           return `https://media.discordapp.net/${activityImage.replace("mp:", "")}`;
         } else {
           return `https://cdn.discordapp.com/app-assets/${appID}/${activityImage}.png`;
         }
       }
-      
-      activityImageElement.src = `${imgConvert(activityImage)}`;
-      activityImageElement.style.display = "block";
+
+      if (activityImageElement) {
+        activityImageElement.src = imgConvert(activityImage);
+        activityImageElement.style.display = "block";
+      }
 
 
       const activityImageSmall = currentActivity.assets.small_image;
